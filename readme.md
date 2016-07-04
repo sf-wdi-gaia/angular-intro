@@ -12,17 +12,17 @@ Angular enables declarative HTML, aiding the creation of dynamic web appliations
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-| User Bower to require Angular |
-| Initialize Angular in an HTML view to write expressions |
-| Organize your code with controllers, passing data to the view |
-| Leverage built-in filters & directives |
-| Implement 2-way data binding |
+* User Bower to require Angular 
+* Initialize Angular in an HTML view to write expressions
+* Organize your code with controllers, passing data to the view
+* Leverage built-in filters & directives
+* Implement 2-way data binding
 
 ### Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- Create dynamic web applications without the aid of a client-side framework
+* Create dynamic web applications without the aid of a client-side framework
 
 ##Prereading Highlights
 
