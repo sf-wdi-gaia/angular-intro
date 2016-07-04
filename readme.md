@@ -303,26 +303,18 @@ However, if you ever minify your angular code when delivering it to a client you
 
 ```js
 app.controller("PokemonCtrl", function() {
-  
+  //...
 });
 ```
 
 To allow minifiers to rename the function parameters and have them still map to the correct injected services, we need to explicitly `$inject` the parameters we want into our controller as strings, which importantly do not get minified (only variables do).
 
 ```js
-var PokemonCtrl = function($scope, $http) {
-  
-};
-PokemonCtrl.$inject = ['$scope', '$http'];
 app.controller('PokemonCtrl', PokemonCtrl);
-```
-
-**or** we can pass our controller an array that contains an array of our dependencies as strings and a function, whose arguments have a 1-to-1 correspondence to the array's items. This is the more common method.
-
-```js
-app.controller('PokemonCtrl', ['$scope', '$http', function($scope, $http) {
-  
-}]);
+PokemonCtrl.$inject = ['$scope', '$http'];
+function PokemonCtrl($scope, $http) {
+  //...
+};
 ```
 
 Again, while our parameters will get minified, the strings will not. The names of parameters are therefore preserved in the strings so that the injector can still them up as dependencies appropriately.
