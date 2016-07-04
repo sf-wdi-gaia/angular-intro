@@ -63,6 +63,8 @@ Just like npm, Bower is a handy way to install files locally, but also gives us 
 
 ##HTML Setup
 
+>Disclaimer: For the moment we will focus on writting Angular that is simply works in an understandable way. At the end of this document find a link to a styleguide that will suggest certain ways to refactor our code.
+
 Create a new directory `ngFun`, inside initialize bower with `bower init` and hit enter a bunch of times to have it generate a `bower.json` file.
 
 Pull down angular with bower with `bower install --save angular`.
@@ -326,3 +328,9 @@ app.controller('PokemonCtrl', ['$scope', '$http', function($scope, $http) {
 Again, while our parameters will get minified, the strings will not. The names of parameters are therefore preserved in the strings so that the injector can still them up as dependencies appropriately.
 
 ![happy pokemon](http://i.giphy.com/3oEduV4SOS9mmmIOkw.gif)
+
+##Our Style Guide
+
+There are many (too many) ways to do the same thing in Angular. As a result it is best for a working-group to define a style-guide amongst themselves in order to define some convention: [here's ours](https://github.com/sf-wdi-29/angular-style-guide/blob/master/README.md).
+
+Note: It is more important to have working code than to strictly follow the style-guide. Feel free to break the style-guide's convention if the the logic can be defended.
