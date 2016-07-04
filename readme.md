@@ -1,19 +1,30 @@
-#Angular
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-| **Learning Objectives** |
-| :---- |
-| User Bower in a project to require Angular |
-| Grok Angular's philosophy |
-| Initialize Angular in an HTML view |
-| Experiment with templating & expressions |
-| Organize your code with controllers |
-| Pass data between the View & Controller with $scope|
-| Leverage built-in filters |
-| Leverage built-in directives |
+# Angular
+
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
+
+Angular enables declarative HTML, aiding the creation of dynamic web appliations.
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+| User Bower to require Angular |
+| Initialize Angular in an HTML view to write expressions |
+| Organize your code with controllers, passing data to the view |
+| Leverage built-in filters & directives |
 | Implement 2-way data binding |
 
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
 
-#Prereading Highlights
+- Create dynamic web applications without the aid of a client-side framework
+
+##Prereading Highlights
 
 [Angular Guide Introduction](https://docs.angularjs.org/guide/introduction)
 
