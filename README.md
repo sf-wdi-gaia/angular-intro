@@ -1,0 +1,2 @@
+# angular-intro
+[angular, bower]
