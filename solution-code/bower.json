@@ -1,7 +1,6 @@
 {
   name: "solution-code",
   version: "0.0.0",
-  homepage: "https://github.com/sf-wdi-26/modules",
   authors: [
     "Ilias Tsangaris <iliastsangaris@gmail.com>"
   ],
