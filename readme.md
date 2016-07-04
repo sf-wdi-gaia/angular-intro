@@ -38,6 +38,19 @@ Angular enables declarative HTML, aiding the creation of dynamic web appliations
 * "Not every app is a good fit for Angular. Angular was built with the CRUD application in mind."
 * "Angular is built around the belief that declarative code is better than imperative when it comes to building UIs and wiring software components together, while imperative code is excellent for expressing business logic."
 
+##Angular 2 Disclaimer
+
+*Why are we not focusing on [Angular 2](https://github.com/angular/angular) but rather [Angular 1.x](https://github.com/angular/angular.js)?*
+
+* The features offered are not radically different, community adoption still to be seen.
+* (As of the writting of this) Angular 1.x is well supported/active on Github.
+* (As of the writting of this) Angular 2 is in the testing & development, labeled as a "Release Candidate"
+![software-dev-cycle](https://upload.wikimedia.org/wikipedia/commons/0/07/Software_dev2.svg)
+* Angular 2 is largely opinionated in that it is best to use with [TypeScript](https://www.typescriptlang.org/), making it a recommended prerequisite.
+* It is much more important to **appreciate the problems** that we are solving on the client-side rather than memorizing specific solutions.
+
+>Other frameworks tackle the same problems (i.e. maintaining state) in different, interesting ways. There is still no "silver-bullet" client-side web framework, but rather a plethora of options each offering a unique perspective and toolset. Some of these technologies include: Ember, React, Redux, Elm, Riot, Backbone, Polymer, etc. [TodoMVC](http://todomvc.com/) is a site that presents examples of a simple "Todo" app written in a number of these technologies helping to compare and contrast them.
+
 ##Bower
 
 [Bower](http://bower.io/) is a **package manager for *front-end* dependencies**. Install it with:
