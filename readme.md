@@ -93,7 +93,7 @@ Angular creates it's views by templating directly into HTML with expressions. Th
 
 Let's write a regular javascript expression inside double curly brackets, such as: `{{ __someExpression__ }}` and see what your HTML evaluates to, for example: `{{ 4 * 4 }} `.
 
-###Challenge: Expressions
+###Challenge
 
 * Take the string `"hola!"` and call method on it that uppercases all the letters.
 * Take the array `['s','w','e','e','t','n','e','s','s']` and call a method on it that joins all the letters together.
@@ -113,7 +113,7 @@ Controllers contain all the business logic for our application.
 
 We can seed our application with some data, but first we have to create a controller.
 
-app.js
+**app.js**
 
 ```js
 app.controller("PokemonCtrl", function() {
@@ -125,7 +125,7 @@ Most applications will have several controllers that map to a particular resourc
 
 To use our controller in our View we have to declare it somewhere. Create a new `div` tag that will house our Pokemon Controller.
 
-index.html
+**index.html**
 
 ```html
 <div ng-controller="PokemonCtrl">
@@ -138,6 +138,8 @@ In order to pass data or behavior to our HTML view we need to use the `$scope` o
 ![scope](http://devgirl.org/wp-content/uploads/2013/03/concepts-controller.png)
 
 Let's register some Pokemon with `$scope`! In order to user the `$scope` object, we need to explicitly pass it to our controller. This is known as [**dependency injection**](https://docs.angularjs.org/guide/di).
+
+**app.js**
 
 ```js
 app.controller("PokemonCtrl", function($scope){
@@ -172,6 +174,8 @@ app.controller("PokemonCtrl", function($scope){
 ```
 
 Great, now let's see if we can see them in our view by referencing the `pokemon` variable inside an expression and wrapping it in a `pre` tag.
+
+**index.html**
 
 ```html
 <div ng-controller="PokemonCtrl">
@@ -212,6 +216,8 @@ A few worth introducing:
 Our user wants to be able to input their name in a field so that the application acknowledges them as the trainer for these Pokemon.
 
 Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
+
+**index.html**
 
 ```html
   <div ng-controller="PokemonCtrl">
@@ -286,6 +292,8 @@ There are many more directives. For now, know that they exist and why they may b
 We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons.
 
 First, Angular doesn't have a built-in `reverse` filter, so let's create one.
+
+**app.js**
 
 ```js
 app.filter('reverse', function() {
