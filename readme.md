@@ -98,14 +98,6 @@ Let's write a regular javascript expression inside double curly brackets, such a
 * Take the string `"hola!"` and call method on it that uppercases all the letters.
 * Take the array `['s','w','e','e','t','n','e','s','s']` and call a method on it that joins all the letters together.
 
-<details><summary>Example solution</summary>
-
-* `"hola!".toUpperCase()`
-* `['s','w','e','e','t','n','e','s','s'].join("")`
-
-</details>
-
-
 
 ##Controllers & Scope
 
