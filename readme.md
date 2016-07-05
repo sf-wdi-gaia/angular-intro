@@ -6,23 +6,23 @@
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
-Angular enables declarative HTML, aiding the creation of dynamic web appliations.
+Angular extends HTML with its declarative syntax to create dynamic, client-side web applications.
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-* User Bower to require Angular 
+* Use Bower to require Angular 
 * Initialize Angular in an HTML view to write expressions
 * Organize your code with controllers, passing data to the view
 * Leverage built-in filters & directives
-* Implement 2-way data binding
+* Implement two-way data binding
 
 ### Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-* Create dynamic web applications without the aid of a client-side framework
+* Create dynamic, client-side web applications *without* a framework
 
 ##Prereading Highlights
 
@@ -42,18 +42,18 @@ Angular enables declarative HTML, aiding the creation of dynamic web appliations
 
 *Why are we not focusing on [Angular 2](https://github.com/angular/angular) but rather [Angular 1.x](https://github.com/angular/angular.js)?*
 
-* The features offered are not radically different, community adoption still to be seen.
-* (As of the writting of this) Angular 1.x is well supported/active on Github.
-* (As of the writting of this) Angular 2 is in the testing & development, labeled as a "Release Candidate"
+* The features offered in Angular 2 are not radically different and community adoption still in progress.
+* (As of the writing of this) Angular 1.x is well supported/active on Github.
+* (As of the writing of this) Angular 2 is in the testing & development, labeled as a "Release Candidate"
 ![software-dev-cycle](https://upload.wikimedia.org/wikipedia/commons/0/07/Software_dev2.svg)
-* Angular 2 is largely opinionated in that it is best to use with [TypeScript](https://www.typescriptlang.org/), making it a recommended prerequisite.
-* It is much more important to **appreciate the problems** that we are solving on the client-side rather than memorizing specific solutions.
+* Angular 2 is best to use with [TypeScript](https://www.typescriptlang.org/), making it a recommended prerequisite.
+* Overall, it is much more important to **appreciate the problems** that we are solving on the client-side rather than memorizing specific solutions.
 
 >Other frameworks tackle the same problems (i.e. maintaining state) in different, interesting ways. There is still no "silver-bullet" client-side web framework, but rather a plethora of options each offering a unique perspective and toolset. Some of these technologies include: Ember, React, Redux, Elm, Riot, Backbone, Polymer, etc. [TodoMVC](http://todomvc.com/) is a site that presents examples of a simple "Todo" app written in a number of these technologies helping to compare and contrast them.
 
 ##Bower
 
-[Bower](http://bower.io/) is a **package manager for *front-end* dependencies**. Install it with:
+[Bower](http://bower.io/) is a **package manager for *front-end* dependencies**. Install or update it with:
 
 ```bash
 npm install -g bower
@@ -63,7 +63,7 @@ Just like npm, Bower is a handy way to install files locally, but also gives us 
 
 ##HTML Setup
 
->Disclaimer: For the moment we will focus on writting Angular that is simply works in an understandable way. At the end of this document find a link to a styleguide that will suggest certain ways to refactor our code.
+>Disclaimer: For the moment we will focus on writing Angular that is simply works in an understandable way. At the end of this document find a link to a style-guide that will suggest certain ways to refactor our code.
 
 Create a new directory `ngFun`, inside initialize bower with `bower init` and hit enter a bunch of times to have it generate a `bower.json` file.
 
@@ -71,7 +71,7 @@ Pull down angular with bower with `bower install --save angular`.
 
 Create a new file `index.html` and link your html file to angular `<script type="text/javascript" src="bower_components/angular/angular.js"></script>`.
 
-In your HTML try changing the `<body>` to `<body ng-app>`. This will tell your HTML page to use use angular.
+In your HTML try changing the `<body>` to `<body ng-app>`. This will tell your HTML page to use angular.
 
 Create an empty `app.js` file in your `index.html` and require it in your `<head>` after angular.
 
@@ -89,13 +89,23 @@ Great, we're up and running!
 
 ##Templates & Expressions
 
-Angular creates it's views by templating directly into HTML with expressions. This is it's declarative way of building the UI.
+Angular creates it's views by templating directly into HTML with expressions. This is its declarative way of building the UI.
 
-Try writing any regular javascript expression inside double curly brackets, such as: `{{ __someExpression__ }}` and see what your HTML evaluates to. What happens when you express:
+Let's write a regular javascript expression inside double curly brackets, such as: `{{ __someExpression__ }}` and see what your HTML evaluates to, for example: `{{ 4 * 4 }} `.
 
-* `4 * 4`
+###Challenge: Expressions
+
+* Take the string `"hola!"` and call method on it that uppercases all the letters.
+* Take the array `['s','w','e','e','t','n','e','s','s']` and call a method on it that joins all the letters together.
+
+<details><summary>Example solution</summary>
+
 * `"hola!".toUpperCase()`
 * `['s','w','e','e','t','n','e','s','s'].join("")`
+
+</details>
+
+
 
 ##Controllers & Scope
 
@@ -307,7 +317,7 @@ app.controller("PokemonCtrl", function() {
 });
 ```
 
-To allow minifiers to rename the function parameters and have them still map to the correct injected services, we need to explicitly `$inject` the parameters we want into our controller as strings, which importantly do not get minified (only variables do).
+To allow the minifier to rename the function parameters and have them still map to the correct injected services, we need to explicitly `$inject` the parameters we want into our controller as strings, which importantly do not get minified (only variables do).
 
 ```js
 app.controller('PokemonCtrl', PokemonCtrl);
