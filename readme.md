@@ -258,7 +258,7 @@ Let's say we want to print out an unordered list (`ul`) of many pokemon, where e
 
 ```html
 <ul>
-	<li ng-repeat="poke in pokemon">{{poke.name}}</li>
+	<li ng-repeat="pokeman in pokemon">{{poke.name}}</li>
 </ul>
 ```
 
