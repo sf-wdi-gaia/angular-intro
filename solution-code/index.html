@@ -24,11 +24,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="poke in pokemon | orderBy:'Ndex' | filter: pokeSearch">
-            <td>{{poke.Ndex}}</td>
-            <td>{{poke.name}}</td>
-            <td>{{poke.type}}</td>
-            <td>{{poke.name|reverse}}</td>
+          <tr ng-repeat="pokeman in pokemon | orderBy:'Ndex' | filter: pokeSearch">
+            <td>{{pokeman.Ndex}}</td>
+            <td>{{pokeman.name}}</td>
+            <td>{{pokeman.type}}</td>
+            <td>{{pokeman.name|reverse}}</td>
           </tr>
         </tbody>
       </table>

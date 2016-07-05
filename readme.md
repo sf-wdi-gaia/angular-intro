@@ -205,7 +205,7 @@ A few worth introducing:
 
 ###ng-Model
 
-Our user wants to be able to input their name in a field so that the application acknowledges them as the trainer for these Pokemon.
+Our user wants to be able to *input* their name in a field so that the application acknowledges them as the trainer for these Pokemon.
 
 Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
 
@@ -268,7 +268,7 @@ Render all the Pokemon into a bootstrap table, where each attribute is a column.
 
 ![pokemon-table](http://i.imgur.com/or1CwF7.png)
 
-Hint: `bower install --save bootstrap-css-only`
+Hint: `bower install --save bootstrap-css-only`, use a `table` with the classes `"table table-striped"`.
 
 ###etc
 
@@ -276,12 +276,12 @@ There are many more directives. For now, know that they exist and why they may b
 
 ###Challenge
 
-* Sort the Pokemon by nDex number.
-* Create an input tag so that I can search for a particular Pokemon.
+* Sort the Pokemon by nDex number (hint: look at the built-in angular filters).
+* Create an input tag so that I can search for a particular Pokemon (hint: checkout the `orderBy` filter in combination with an `ng-input`).
 
 ##Custom Filters
 
-We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons.
+We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons (the reverse name).
 
 First, Angular doesn't have a built-in `reverse` filter, so let's create one.
 
@@ -300,10 +300,11 @@ app.filter('reverse', function() {
 });
 ```
 
+*Note: filters require a function to be returned.*
+
 ###Challenge
 
-* Create a new column in your table called "Nemesis" and populate it with that pokemon's name reversed (some Google searching may be required).
-* Hint: Don't forget to require your custom filter as a dependency in your controller.
+* Create a new column in your table called "Nemesis" and populate it with that pokemon's name reversed. Hint: Don't forget to require your custom filter as a dependency in your controller.
 
 ##Pro-tip: Minification in Angular
 
@@ -321,8 +322,8 @@ To allow the minifier to rename the function parameters and have them still map 
 
 ```js
 app.controller('PokemonCtrl', PokemonCtrl);
-PokemonCtrl.$inject = ['$scope', '$http'];
-function PokemonCtrl($scope, $http) {
+PokemonCtrl.$inject = ['$scope', 'reverseFilter'];
+function PokemonCtrl($scope, reverseFilter) {
   //...
 };
 ```

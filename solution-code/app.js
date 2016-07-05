@@ -1,6 +1,12 @@
-var app = angular.module("ngFun", []);
+// App
+angular
+  .module("ngFun", [])
+  .controller("PokemonCtrl", PokemonCtrl)
+  .filter('reverse', reverseFilter);
 
-app.controller("PokemonCtrl", ["$scope", "reverseFilter", function($scope, reverseFilter){
+// Controllers
+PokemonCtrl.$inject = ['$scope', 'reverseFilter'];
+function PokemonCtrl($scope, $http) {
   $scope.trainer = {
     name: "Ash"
   };
@@ -31,9 +37,11 @@ app.controller("PokemonCtrl", ["$scope", "reverseFilter", function($scope, rever
       type: 'Normal'
     }
   ];
-}]);
+}
 
-app.filter('reverse', function() {
+// Custom Filters
+function reverseFilter() {
+  // filters require a function to be returned
   return function(input) {
     input = input || '';
     var out = input.split("").reverse().join("");
@@ -42,4 +50,4 @@ app.filter('reverse', function() {
     out = out[0].toUpperCase() + out.slice(1);
     return out;
   };
-});
+}
