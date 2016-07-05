@@ -3,11 +3,11 @@
 # Angular
 
 ### Why is this important?
-<!-- framing the "why" in big-picture/real world examples -->
+<!-- framing the "why" in big-picture/real world examplnges -->
 *This workshop is important because:*
 
 Angular extends HTML with its declarative syntax to create dynamic, client-side web applications.
-
+or
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
@@ -277,7 +277,7 @@ There are many more directives. For now, know that they exist and why they may b
 ###Challenge
 
 * Sort the Pokemon by nDex number (hint: look at the built-in angular filters).
-* Create an input tag so that I can search for a particular Pokemon (hint: checkout the `orderBy` filter in combination with an `ng-input`).
+* Create an input tag so that I can search for a particular Pokemon (hint: checkout the `filter` filter in combination with an `ng-model`).
 
 ##Custom Filters
 

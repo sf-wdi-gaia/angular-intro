@@ -6,7 +6,7 @@ angular
 
 // Controllers
 PokemonCtrl.$inject = ['$scope', 'reverseFilter'];
-function PokemonCtrl($scope, $http) {
+function PokemonCtrl($scope, reverseFilter) {
   $scope.trainer = {
     name: "Ash"
   };
