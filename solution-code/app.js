@@ -2,7 +2,7 @@
 angular
   .module("ngFun", [])
   .controller("PokemonCtrl", PokemonCtrl)
-  .filter('reverse', reverseFilter);
+  .filter('reverseFilter', reverseFilter);
 
 // Controllers
 PokemonCtrl.$inject = ['$scope', 'reverseFilter'];
