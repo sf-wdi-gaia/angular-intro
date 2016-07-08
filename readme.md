@@ -7,7 +7,7 @@
 *This workshop is important because:*
 
 Angular extends HTML with its declarative syntax to create dynamic, client-side web applications.
-or
+
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
